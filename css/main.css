@@ -1,0 +1,233 @@
+body {
+	font-family: "Museo Sans Cyrl";
+	overflow-x: hidden;
+}
+ul, ol {
+	-moz-padding-start: 0px;
+    -webkit-padding-start: 0px;
+    -khtml-padding-start: 0px;
+    -o-padding-start: 0px;
+    padding-start: 0px;
+    padding: 0;
+    margin-bottom: 0;
+}
+p {
+	margin-bottom: 0;
+}
+a {
+	color: #000;
+}
+a, a:active, a:focus, a:hover {
+    outline: none;
+    text-decoration: none;
+}
+button {
+	outline: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	border: none;
+}
+
+
+
+
+
+/* adaptive */
+.panel-adaptive {
+	position: fixed;
+	top: 60px;
+	right: 0;
+	left: 100%;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background: #fff;
+	display: none;
+	border-top: 1px solid #eee;
+	-webkit-transition: -webkit-transform .35s cubic-bezier(.55,.085,.68,.53);
+	transition: -webkit-transform .35s cubic-bezier(.55,.085,.68,.53);
+	-o-transition: transform .35s cubic-bezier(.55,.085,.68,.53);
+	transition: transform .35s cubic-bezier(.55,.085,.68,.53);
+	transition: transform .35s cubic-bezier(.55,.085,.68,.53), -webkit-transform .35s cubic-bezier(.55,.085,.68,.53);
+    transition: transform .35s cubic-bezier(.55,.085,.68,.53),-webkit-transform .35s cubic-bezier(.55,.085,.68,.53);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+}
+.panel-adaptive.panel-right {
+    -webkit-transform: translateX(-100%) translateZ(0);
+    transform: translateX(-100%) translateZ(0);
+    -webkit-transition-duration: .63s;
+         -o-transition-duration: .63s;
+            transition-duration: .63s;
+    -webkit-transition-timing-function: cubic-bezier(.23,1,.32,1);
+         -o-transition-timing-function: cubic-bezier(.23,1,.32,1);
+            transition-timing-function: cubic-bezier(.23,1,.32,1); 
+}
+.panel-adaptive ul li {
+	list-style: none;
+}
+.panel-adaptive ul li a {
+	text-align: center;
+	display: block;
+	padding: 20px;
+	color: #19212a;
+    font-size: 16px;
+    font-family: 'Museo Sans Cyrl 700';
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    border-bottom: 1px solid #eee;
+}
+.panel-adaptive .pa__plinks li a {
+	font-weight: 400;
+}
+.hamburger {
+	padding: 15px 15px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-transition-property: opacity, -webkit-filter;
+	transition-property: opacity, -webkit-filter;
+	-o-transition-property: opacity, filter;
+	transition-property: opacity, filter;
+	transition-property: opacity, filter, -webkit-filter;
+	-webkit-transition-duration: 0.15s;
+	     -o-transition-duration: 0.15s;
+	        transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear;
+	     -o-transition-timing-function: linear;
+	        transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	overflow: visible; 
+}
+.hamburger:hover {
+    opacity: 0.7; 
+}
+
+.hamburger-box {
+	width: 30px;
+  	height: 24px;
+  	display: inline-block;
+  	position: relative; 
+}
+
+.hamburger-inner {
+	display: block;
+  	top: 50%;
+  	margin-top: -2px; 
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.15s;
+         -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease; 
+}
+.hamburger-inner::before, .hamburger-inner::after {
+	content: "";
+    display: block; 
+}
+.hamburger-inner::before {
+	top: -10px; 
+}
+.hamburger-inner::after {
+    bottom: -10px; 
+}
+
+.hamburger--elastic-r .hamburger-inner {
+	top: 5px;
+  	-webkit-transition-duration: 0.275s;
+  	     -o-transition-duration: 0.275s;
+  	        transition-duration: 0.275s;
+  	-webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  	     -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  	        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+}
+.hamburger--elastic-r .hamburger-inner::before {
+    top: 10px;
+    -webkit-transition: opacity 0.125s 0.275s ease;
+    -o-transition: opacity 0.125s 0.275s ease;
+    transition: opacity 0.125s 0.275s ease; 
+}
+  .hamburger--elastic-r .hamburger-inner::after {
+    top: 20px;
+    -webkit-transition: -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+}
+
+.hamburger--elastic-r.is-active .hamburger-inner {
+  	-webkit-transform: translate3d(0, 10px, 0) rotate(-135deg);
+  	        transform: translate3d(0, 10px, 0) rotate(-135deg);
+  	-webkit-transition-delay: 0.075s;
+  	     -o-transition-delay: 0.075s;
+  	        transition-delay: 0.075s; 
+}
+.hamburger--elastic-r.is-active .hamburger-inner::before {
+    -webkit-transition-delay: 0s;
+         -o-transition-delay: 0s;
+            transition-delay: 0s;
+    opacity: 0; 
+}
+.hamburger--elastic-r.is-active .hamburger-inner::after {
+    -webkit-transform: translate3d(0, -20px, 0) rotate(270deg);
+            transform: translate3d(0, -20px, 0) rotate(270deg);
+    -webkit-transition-delay: 0.075s;
+         -o-transition-delay: 0.075s;
+            transition-delay: 0.075s; 
+}
+.header__menu {
+	display: none;
+	float: left;
+}
+@media (max-width: 991px) {
+	.panel-open header {
+		background: #004f9f !important;
+	}
+	.panel-adaptive {
+		display: block;
+	}
+	.header__menu {
+		display: block;
+		float: left;
+		width: 60px;
+		height: 60px;
+	}
+	body {
+		padding-top: 60px;
+	}
+	header {
+		height: 60px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 99;
+		background: #fff;
+	}
+}
+@media (max-width: 767px) {
+	
+}
