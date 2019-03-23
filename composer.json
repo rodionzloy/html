@@ -1,3 +1,4 @@
 {
-"minimum-stability": "dev"
+  "name" : "rodionzloy/html",
+  "minimum-stability": "dev"
 }
